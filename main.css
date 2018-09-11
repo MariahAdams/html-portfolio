@@ -15,9 +15,6 @@ img {
 section {
   height: 100vh;
   width: auto;
-}
-
-main > section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,9 +24,30 @@ main > section {
 
 
 /* App */
+a {
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 6px;
+}
+
+a:hover {
+  color: steelblue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+}
+
+a:visited {
+  color: purple;
+}
+
 nav {
   background-color: rgb(36, 36, 36);
   color: white;
+  padding: 20px;
 }
 
 .menu-toggle {
@@ -49,8 +67,8 @@ nav:hover .menu-content {
   display: flex;
 }
 
-.menu-content {
-  border: 2px solid red;
+.menu-content > a:hover {
+  background-color: steelblue;
 }
 
 @media only screen and (min-width: 768px) {
@@ -61,6 +79,24 @@ nav:hover .menu-content {
     color: white;
   }
 
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: steelblue;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: yellow;
+  }
+
+  a:visited {
+    color: purple;
+  }
+
   .menu-toggle {
     display: none;
   }
@@ -68,6 +104,7 @@ nav:hover .menu-content {
   .menu-content {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
   }
 
 }
